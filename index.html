@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Train Schedule</title>
+
+    <!-- Added Moment JS -->
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
+</head>
+
+<body>
+
+    <!-- Script -->
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyDKJNLczGBbiVz8KH_9gSnLhorQfUUkk7w",
+            authDomain: "train-arrival-f208c.firebaseapp.com",
+            databaseURL: "https://train-arrival-f208c.firebaseio.com",
+            projectId: "train-arrival-f208c",
+            storageBucket: "",
+            messagingSenderId: "881729637018",
+            appId: "1:881729637018:web:ecd4524b1b7b2c3b"
+        };
+        // Initialize Firebase
+        // firebase.initializeApp(firebaseConfig);
+
+        // var database = firebase.database();
+        setup()
+        function train1() {
+
+
+            var tFrequency = 3;
+
+            var firstTime = "03:30";
+
+            var firstTimeConverted = moment(firstTime, "HH:mm").subtract(1, "years");
+            console.log(firstTimeConverted);
+
+            var currentTime = moment();
+            console.log("CURRENT TIME: " + moment(currentTime).format("hh:mm"));
+
+            var diffTime = moment().diff(moment(firstTimeConverted), "minutes");
+            console.log("DIFFERENCE IN TIME: " + diffTime);
+
+            var tRemainder = diffTime % tFrequency;
+            console.log(tRemainder);
+
+            var tMinutesTillTrain = tFrequency - tRemainder;
+            console.log("MINUTES TILL TRAIN: " + tMinutesTillTrain);
+
+            var nextTrain = moment().add(tMinutesTillTrain, "minutes");
+            console.log("ARRIVAL TIME: " + moment(nextTrain).format("hh:mm"));
+        }
+        function train2() {
+
+
+            var tFrequency = 5;
+
+
+            var firstTime = "06:00";
+
+            var firstTimeConverted = moment(firstTime, "HH:mm").subtract(1, "years");
+            console.log(firstTimeConverted);
+
+
+            var currentTime = moment();
+            console.log("CURRENT TIME: " + moment(currentTime).format("hh:mm"));
+
+            var diffTime = moment().diff(moment(firstTimeConverted), "minutes");
+            console.log("DIFFERENCE IN TIME: " + diffTime);
+
+            var tRemainder = diffTime % tFrequency;
+            console.log(tRemainder);
+
+            var tMinutesTillTrain = tFrequency - tRemainder;
+            console.log("MINUTES TILL TRAIN: " + tMinutesTillTrain);
+
+            var nextTrain = moment().add(tMinutesTillTrain, "minutes");
+            console.log("ARRIVAL TIME: " + moment(nextTrain).format("hh:mm"));
+        }
+        function train3() {
+
+
+var tFrequency = 4;
+
+
+var firstTime = "06:30";
+
+var firstTimeConverted = moment(firstTime, "HH:mm").subtract(1, "years");
+console.log(firstTimeConverted);
+
+
+var currentTime = moment();
+console.log("CURRENT TIME: " + moment(currentTime).format("hh:mm"));
+
+var diffTime = moment().diff(moment(firstTimeConverted), "minutes");
+console.log("DIFFERENCE IN TIME: " + diffTime);
+
+var tRemainder = diffTime % tFrequency;
+console.log(tRemainder);
+
+var tMinutesTillTrain = tFrequency - tRemainder;
+console.log("MINUTES TILL TRAIN: " + tMinutesTillTrain);
+
+var nextTrain = moment().add(tMinutesTillTrain, "minutes");
+console.log("ARRIVAL TIME: " + moment(nextTrain).format("hh:mm"));
+}
+
+function train4() {
+
+
+var tFrequency = 8;
+
+
+var firstTime = "04:15";
+
+var firstTimeConverted = moment(firstTime, "HH:mm").subtract(1, "years");
+console.log(firstTimeConverted);
+
+
+var currentTime = moment();
+console.log("CURRENT TIME: " + moment(currentTime).format("hh:mm"));
+
+var diffTime = moment().diff(moment(firstTimeConverted), "minutes");
+console.log("DIFFERENCE IN TIME: " + diffTime);
+
+var tRemainder = diffTime % tFrequency;
+console.log(tRemainder);
+
+var tMinutesTillTrain = tFrequency - tRemainder;
+console.log("MINUTES TILL TRAIN: " + tMinutesTillTrain);
+
+var nextTrain = moment().add(tMinutesTillTrain, "minutes");
+console.log("ARRIVAL TIME: " + moment(nextTrain).format("hh:mm"));
+}
+
+function train5() {
+
+
+var tFrequency = 15;
+
+
+var firstTime = "05:00";
+
+var firstTimeConverted = moment(firstTime, "HH:mm").subtract(1, "years");
+console.log(firstTimeConverted);
+
+
+var currentTime = moment();
+console.log("CURRENT TIME: " + moment(currentTime).format("hh:mm"));
+
+var diffTime = moment().diff(moment(firstTimeConverted), "minutes");
+console.log("DIFFERENCE IN TIME: " + diffTime);
+
+var tRemainder = diffTime % tFrequency;
+console.log(tRemainder);
+
+var tMinutesTillTrain = tFrequency - tRemainder;
+console.log("MINUTES TILL TRAIN: " + tMinutesTillTrain);
+
+var nextTrain = moment().add(tMinutesTillTrain, "minutes");
+console.log("ARRIVAL TIME: " + moment(nextTrain).format("hh:mm"));
+}
+        function setup() {
+            train1()
+            train2()
+            train3()
+            train4()
+            train5()
+        }
+    </script>
+
+</body>
+
+</html>
